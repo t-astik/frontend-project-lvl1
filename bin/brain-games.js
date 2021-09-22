@@ -25,18 +25,18 @@ while (right === true && count < 3) {
   } else if (myAnswer === 'yes') {
     console.log("'yes' is wrong answer ;(. Correct answer was 'no'");
     console.log(`Let's try again, ${name}`);
-    right = 2;
+    right = false;
   } else if (myAnswer === 'no') {
     console.log("'no' is wrong answer ;(. Correct answer was 'yes'");
     console.log(`Let's try again, ${name}`);
-    right = 2;
+    right = false;
   } else if (myAnswer !== 'yes' && myAnswer !== 'no' && randomNumber % 2 === 0) {
     console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was 'yes'`);
     console.log(`Let's try again, ${name}`);
-    right = 2;
+    right = false;
   } else if (myAnswer !== 'yes' && myAnswer !== 'no' && randomNumber % 2 !== 0) {
     console.log(`'${myAnswer}' is wrong answer ;(. Correct answer was 'no'`);
     console.log(`Let's try again, ${name}`);
-    right = 2;
+    right = false;
   }
 }
