@@ -5,7 +5,7 @@ function getRandomInt() {
   return Math.floor(Math.random() * 100);
 }
 function isPrimeNumber(n) {
-  for (let i = 2; i < n; i++) {
+  for (let i = 2; i < n; i += 1) {
     if (n % i === 0) return false;
   }
   return n > 1;
@@ -23,11 +23,11 @@ while (right === true && count < 3) {
   console.log(`Question: ${randomNumber1}`);
 
   const myAnswer = readlineSync.question('Your answer: ');
-  if ((myAnswer === 'yes' && isPrimeNumber(getRandomInt()) === true) || (myAnswer === 'no' && isPrimeNumber(randomNumber1) === false)) {
+  if ((myAnswer === 'yes' && isPrimeNumber(randomNumber1) === true) || (myAnswer === 'no' && isPrimeNumber(randomNumber1) === false)) {
     console.log('Correct!');
     right = true;
     count += 1;
-    if (count === 3) {
+    if (count > 2) {
       console.log(`Congratulations, ${name}!`);
     }
   } else if ((myAnswer === 'yes' && isPrimeNumber(randomNumber1) === false)) {
