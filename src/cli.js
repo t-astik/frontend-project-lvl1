@@ -46,6 +46,10 @@ function isPrimeNumber(n) {
 //   }
 // }
 
+// function game() {
+//   greeting();
+// }
+
 export {
   greeting, getRandomInt, calculator, gcd, isPrimeNumber,
 };
