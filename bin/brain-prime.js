@@ -1,24 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { isPrimeNumber, getRandomInt, greeting } from '../src/cli.js';//eslint-disable-line
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 100);
-}
-function isPrimeNumber(n) {
-  for (let i = 2; i < n; i += 1) {
-    if (n % i === 0) return false;
-  }
-  return n > 1;
-}
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const name = greeting();
 let right = true;
 let count = 0;
+const max = 100;
 
 while (right === true && count < 3) {
-  const randomNumber1 = getRandomInt();
+  const randomNumber1 = getRandomInt(max);
 
   console.log(`Question: ${randomNumber1}`);
 

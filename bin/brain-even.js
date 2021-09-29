@@ -1,18 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { greeting, getRandomInt } from '../src/cli.js';//eslint-disable-line
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 1000000);
-}
-
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const name = greeting();
 let right = true;
 let count = 0;
+const max = 1000;
 while (right === true && count < 3) {
-  const randomNumber = getRandomInt();
+  const randomNumber = getRandomInt(max);
   console.log(`Question: ${randomNumber}`);
   const myAnswer = readlineSync.question('Your answer: ');
   if ((myAnswer === 'yes' && randomNumber % 2 === 0) || (myAnswer === 'no' && randomNumber % 2 !== 0)) {

@@ -1,31 +1,17 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 10);
-}
-function calculator(num1, num2, mark) {
-  switch (mark) {
-    case '*':
-      return num1 * num2;
-    case '+':
-      return num1 + num2;
-    case '-':
-      return num1 - num2;
-    default:
-      return mark;
-  }
-}
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('What is the result of the expression?');
+import { greeting, getRandomInt, calculator } from '../src/cli.js';// eslint-disable-line
+
+const name = greeting();
+
+const max = 10;
+const items = ['+', '-', '*'];
 let right = true;
 let count = 0;
-const items = ['+', '-', '*'];
 while (right === true && count < 3) {
-  const randomNumber1 = getRandomInt();
-  const randomNumber2 = getRandomInt();
+  const randomNumber1 = getRandomInt(max);
+  const randomNumber2 = getRandomInt(max);
 
   const marker = items[Math.floor(Math.random() * items.length)];
 

@@ -1,30 +1,23 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { greeting, getRandomInt } from '../src/cli.js';//eslint-disable-line
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 100);
-}
-function getRandomInt1() {
-  return Math.floor(Math.random() * 10) + 1;
-}
-
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('What number is missing in the progression?');
+const name = greeting();
+const max1 = 10;
+const max = 100;
 let right = true;
 let count = 0;
 
 while (right === true && count < 3) {
   const numbers = [];
-  const randomNumber1 = getRandomInt();
+  const randomNumber1 = getRandomInt(max);
   numbers.push(randomNumber1);
-  const term = getRandomInt1();
+  const term = getRandomInt(max1);
   for (let i = 0; i < 10; i += 1) {
     const nextNumber = numbers[numbers.length - 1] + term;
     numbers.push(nextNumber);
   }
-  const index = getRandomInt1();
+  const index = getRandomInt(max1);
   const rightAnswer = numbers[index];
   numbers[index] = '..';
   console.log(`Question: ${numbers}`);

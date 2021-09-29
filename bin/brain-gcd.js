@@ -1,24 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { gcd, getRandomInt, greeting } from '../src/cli.js';//eslint-disable-line
 
-function getRandomInt() {
-  return Math.floor(Math.random() * 100);
-}
-function gcd(a, b) {
-  if (b === 0) {
-    return a;
-  }
-  return gcd(b, a % b);
-}
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Find the greatest common divisor of given numbers.');
+const name = greeting();
 let right = true;
 let count = 0;
+const max = 100;
 while (right === true && count < 3) {
-  const randomNumber1 = getRandomInt();
-  const randomNumber2 = getRandomInt();
+  const randomNumber1 = getRandomInt(max);
+  const randomNumber2 = getRandomInt(max);
 
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
 
