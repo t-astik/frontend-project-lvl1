@@ -1,6 +1,9 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/t-astik/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/t-astik/frontend-project-lvl1/actions)
+# Brain games
 
-https://asciinema.org/a/gkstPPcw2Dk0BPIZYV35T3qDU
+[![Hexlet workflow](https://github.com/romankurakin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/romankurakin/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
+[![Lint workflow](https://github.com/romankurakin/frontend-project-lvl1/workflows/lint/badge.svg)](https://github.com/romankurakin/frontend-project-lvl1/actions/workflows/lint.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fc39a31aa9abd2cf10d7/maintainability)](https://codeclimate.com/github/romankurakin/frontend-project-lvl1/maintainability)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+## Demo
+
+[![asciicast](https://asciinema.org/a/XGOmiNmMV4FRnIB7cmIBic1zn.svg)](https://asciinema.org/a/XGOmiNmMV4FRnIB7cmIBic1zn)

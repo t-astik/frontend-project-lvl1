@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.1",
+  "version": "1.0.0",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -9,20 +10,17 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "type": "module",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint 'src/**/*.js' './bin/**/*.js' --fix"
   },
   "author": "Astemir",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^7.25.0"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
   }
 }
